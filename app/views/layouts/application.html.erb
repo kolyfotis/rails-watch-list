@@ -11,6 +11,21 @@
   </head>
 
   <body>
+  <div class="banner">
+      <h1
+        class="text-center mt-3">
+        Watch List
+      </h1>
+      <nav
+        class="navbar navbar-light "
+      >
+        <div class="container">
+          <%= link_to 'My lists', lists_path %>
+          <%= link_to 'New list', new_list_path %>
+        </div>
+      </nav>
+    </div>
+    <hr>
     <%= yield %>
   </body>
 </html>

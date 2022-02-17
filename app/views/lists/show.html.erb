@@ -1,0 +1,36 @@
+<div class="container">
+  <h2><%= @list.name %></h2>
+
+  <table
+    class="table table-light table-striped"
+  >
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Overview</th>
+        <th>Poster URL</th>
+        <th>Rating</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @movies.each do |movie| %>
+        <tr>
+          <td>
+            <%= link_to movie.name, movie %>
+          </td>
+          <td><%= movie.title %></td>
+          <td><%= movie.overview %></td>
+          <td><%= movie.poster_url %></td>
+          <td><%= movie.rating %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+<hr>
+
+<div class="container text-center">
+  <%= link_to 'Back', lists_path %>
+</div>

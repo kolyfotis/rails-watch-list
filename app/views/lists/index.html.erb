@@ -1,0 +1,23 @@
+<div class="container">
+  <h2>My Lists</h2>
+
+  <table
+    class="table table-light table-striped"
+  >
+    <thead>
+      <tr>
+        <th>Name</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @lists.each do |list| %>
+        <tr>
+          <td>
+            <%= link_to list.name, list %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

@@ -10,19 +10,19 @@
         <th>Overview</th>
         <th>Poster URL</th>
         <th>Rating</th>
+        <th>My Comments</th>
       </tr>
     </thead>
 
     <tbody>
       <% @list.movies.each do |movie| %>
+      <% bookmark = Bookmark.find_by(list: @list, movie: movie) %>
         <tr>
-          <td>
-            <%= link_to movie.name, movie %>
-          </td>
           <td><%= movie.title %></td>
           <td><%= movie.overview %></td>
           <td><%= movie.poster_url %></td>
           <td><%= movie.rating %></td>
+          <td><%= bookmark.comment %></td>
         </tr>
       <% end %>
     </tbody>

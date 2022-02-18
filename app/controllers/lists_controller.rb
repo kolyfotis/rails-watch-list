@@ -5,7 +5,9 @@ class ListsController < ApplicationController
     @lists = List.all
   end
 
-  def show; end
+  def show
+    @bookmark = Bookmark.new
+  end
 
   def new
     @list = List.new
@@ -18,6 +20,11 @@ class ListsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def destroy
+    @list.destroy
+    redirect_to lists_path
   end
 
   private

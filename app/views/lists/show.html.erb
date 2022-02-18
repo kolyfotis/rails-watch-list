@@ -1,6 +1,8 @@
 <div class="container">
   <h2><%= @list.name %></h2>
 
+  <%= cl_image_tag @list.photo.key, height: 300, width: 400, crop: :fill %>
+
   <table
     class="table table-light table-striped"
   >

@@ -46,6 +46,7 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem "autoprefixer-rails", "10.2.5"
+gem 'cloudinary'
 gem 'dotenv-rails', groups: [:development, :test]
 gem "font-awesome-sass", "~> 5.15"
 gem 'rails-controller-testing', group: [ :test ]

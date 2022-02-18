@@ -11,20 +11,19 @@
   </head>
 
   <body>
-  <div class="banner">
+  <div
+    class="banner"
+    style="background-image: url(<%= asset_path 'cinema_banner.jpg' %>);">
+    <div class="container">
       <h1
-        class="text-center mt-3">
+        class="text-center">
         <%= link_to 'Watch List', root_path %>
       </h1>
-      <nav
-        class="navbar navbar-light "
-      >
-        <div class="container">
-          <%= link_to 'My lists', lists_path %>
-          <%= link_to 'New list', new_list_path %>
-        </div>
-      </nav>
+      <p>Organize your favorite movies in lists.</p>
+      <%= link_to 'My lists', lists_path %>
+      <%= link_to 'New list', new_list_path %>
     </div>
+  </div>
     <hr>
     <%= yield %>
   </body>
